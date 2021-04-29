@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>My First Firebase Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+</head>
+
+<body>
+	<button onclick="topFunction()" id="myBtn" title="Go to top">back to top</button>
+
+	<div class="container-fluid">
+		<div class="jumbotron">
+			<h1 class="display-4">Using Firebase with macOS <img src="/macbook.gif"></h1>
+			<br> <small>created in December 2020, while running
+				macOS
+				Catalina v10.15.7</small></p>
+		</div>
+		<div class="row">
+
+			<div class="col-sm-1">
+			</div>
+
+			<div class="col-sm-8">
+
+				<div id="section1">
+					<p class="lead">1. First, let’s check to see if you have a version of Node.js already installed.</p>
+					<p> <img class="img-fluid" src="/screenshots/nodev.png" alt="Terminal" width="380"></p>
+
+					<p>Using Spotlight search <kbd>Cmd + Space</kbd>, search for & open Terminal.</p>
+					<p>Enter <code>node - v</code> in the terminal and press <kbd>Enter</kbd>.<br></p>
+
+					<p><b>If you get a message like this:</b>
+						<div class="card card-body bg-light">
+							<code>lidiariehman@Lidias-MBP ~ % node - v<br>
+								Welcome to Node.js v14.15.1.</code></div>
+				</div>
+				Then you already have Node.js installed.</p>
+				<p>Update to the latest version using: <code>npm i -g npm</code><br>
+					If you get checkPermissions warnings, run the command: <code>sudo npm i -g npm</code><br>
+					When you see <code>Password:</code> type in the password you use to login to your computer. It
+					will not show on the terminal as you type. Press enter after typing, and if the password is
+					valid, the installation will start.</p>
+				<p>
+					When you have the latest version installed, <a href="#section2" class="text-success">move on to the
+						next step.</a>
+				</p>
+				<p><b>If you get a message like this:</b></p>
+				<div class="card card-body bg-light"><code>-bash: node: command not found.</code>
+				</div>
+				Then you do need to install:
+				</p>
+				<ul>
+					<li>Go to <a href="https://nodejs.org/en/">nodejs.org</a> & you'll see a download link for
+						MacOS.</li>
+					<p class="small"> <img class="img-fluid" src="/screenshots/node.png" alt="nodejs.org"></p>
+
+
+					<li>When the file finishes downloading, locate it in Finder and double-click on it.</li>
+					<li>Follow the entire installation process.</li>
+					<li>When installation is finished, open the Terminal again.</li>
+					<li>Enter <code>node - v</code> in the Terminal to verify that Node.js is installed correctly.
+					</li>
+				</ul>
+				<p>
+					<b>Did you get this message?</b>
+					<div class="card card-body bg-light"><code>lidiariehman@Lidias-MBP ~ % node - v<br>
+							Welcome to Node.js v14.15.1.</code></div>
+					If a version was output, then you’re good!
+				</p>
+				</ul>
+
+				<hr>
+
+				<div id="section2">
+					<p class="lead">2. Sign up for Firebase if you haven’t already.</p>
+
+					<p>
+
+
+
+						<a href="https://console.firebase.google.com/">https://console.firebase.google.com/</a></p>Log
+					in using a personal gmail account. <p class="font-italic">Please note, you cannot complete sign
+						up using your
+						FSC email address!</p>
+					<p>Choose create a project & follow the steps.</p>
+				</div>
+				<hr>
+				<div id="section3">
+					<p class="lead">3. Great! Now, let’s add the Firebase SDK to your website.</p>
+
+					<p class="small font-italic">Note: I am using Visual Studio Code, but the process will be the same
+						in any text editor.</p>
+					<div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe
+							src="https://streamable.com/e/uzqa85" frameborder="0" width="100%" height="100%"
+							allowfullscreen
+							style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe>
+					</div>
+
+					<!-- <div class="embed-responsive embed-responsive-16by9">
+							<iframe class="embed-responsive-item" src="https://streamable.com/e/uzqa85"
+								allowfullscreen></iframe></div> -->
+					<p>
+						<ul>
+							<li>When you click on your project, you will see a left-hand menu with a gear icon. </li>
+							<li>Click on <b>Project Settings</b>.</li>
+							<li>Scroll down to the <b> Firebase SDK snippet.</b>
+								Copy the provided code, and paste it into your index.html document, just before your
+								closing
+								<code>
+</body></code> tag.<br></li>
+<li>Save your document.</p>
+</li>
+</ul>
+</div>
+<hr>
+
+<div id="section4">
+	<p class="lead">4. Install Firebase.</p>
+	<div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe
+			src="https://streamable.com/e/ob86rr" frameborder="0" width="100%" height="100%" allowfullscreen
+			style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
+	<!--	<div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" src="https://streamable.com/ob86rr" allowfullscreen></iframe></div><br>-->
+	<p>
+		Here, I have opened Terminal in VS code by pressing <kbd>Ctrl + ~</kbd><br>
+		Type the following commands in the Terminal: <div class="card card-body bg-light"><code>sudo npm install -g
+				firebase-tools</code> </div>
+		press <kbd>Enter</kbd><br>
+		<p>Type your computer password and press <kbd>Enter</kbd></p>
+		<p>The installation will begin, and you will see the version output when it is
+			finished.
+		</p>
+		<div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe
+				src="https://streamable.com/e/da8m5c" frameborder="0" width="100%" height="100%" allowfullscreen
+				style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
+		<!-- <div class="embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive-item" src="https://streamable.com/ob86rr" allowfullscreen></iframe></div><br>-->
+		<p>
+			<div class="card card-body bg-light"><code>firebase login</code> </div>press
+			<kbd>Enter</kbd>
+		</p>
+		Login using the same gmail account you created your project with.
+		<p>My account was already logged in, so my account email was output in the terminal.</p>
+
+		<p>
+			<div class="card card-body bg-light"><code>firebase init</code></div> press <kbd>Enter</kbd>
+		</p>
+		<p>
+			This initializes Firebase in the current directory (folder) that you are working in!
+		</p>
+		<p>
+			Now we must answer some questions:</p>
+		<ul>
+			<li>Use the arrow keys to scroll down to <code>Hosting: Configure and deploy Firebase Hosting
+					sites</code><br></li>
+			<li>press <kbd>Space</kbd> to select, then <kbd>Enter</kbd></li>
+			<li>Scroll to <code>Use an existing project </code>, press <kbd>Enter</kbd></li>
+			<li>Scroll to your project name, press <kbd>Enter</kbd></li>
+	</p>
+
+	<p>
+		For the rest of the questions, let’s use these answers for now:
+		<li>press <kbd>Enter</kbd><br></li>
+		<li> type <code>N</code>, press <kbd>Enter</kbd><br></li>
+		<li>type <code>N</code>, press <kbd>Enter</kbd><br></li>
+		Output: <code>Firebase initialization complete!</code>
+		<li>Type <code>firebase deploy</code>, press <kbd>Enter</kbd></li>
+		Output: <code>Deploy complete!</code>
+		</ul>
+		Terminal will also output your project console URL and hosting URL. Visit the hositng URL to confirm that
+		setup
+		is
+		complete!<br>
+	</p>
+</div>
+<hr>
+<div id="section5">
+	<p class="lead">5. Add files to the hosted site.</p>
+	<div style="width:100%;height:0px;position:relative;padding-bottom:56.250%;"><iframe
+			src="https://streamable.com/e/y13p5v" frameborder="0" width="100%" height="100%" allowfullscreen
+			style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden;"></iframe></div>
+	<!--
+	<div class="embed-responsive embed-responsive-16by9">
+		<iframe class="embed-responsive-item" src="https://streamable.com/y13p5v" allowfullscreen></iframe></DIV>-->
+	<p>
+		In your root folder, there there is a new folder titled "public", open it up<br>
+		Inside there is a default index.html document, created for you by Firebase. You can throw that in the trash and
+		replace it with
+		the index.html file you created. <br>
+		<p class="font-weight-bolder"><mark>Any HTML pages, .js files, stylesheets, images, etc. that you want to show
+				on your website must be moved into
+				the public folder.</mark><br><br>
+			Whenever you make changes to any file in the public folder, you must type <code>firebase deploy</code> into
+			the
+			terminal to update the live website. The terminal will confirm that the update was successful!<br></p>
+
+		<p>
+			<button type="button" class="btn btn-primary" id="myShowBtn">Done!</button>
+
+			<div class="toast mt-3">
+				<div class="toast-header">
+					Congrats!
+				</div>
+				<div class="toast-body">
+					You did it! <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-emoji-sunglasses"
+						fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd"
+							d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+						<path fill-rule="evenodd"
+							d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM6.5 6.497V6.5h-1c0-.568.447-.947.862-1.154C6.807 5.123 7.387 5 8 5s1.193.123 1.638.346c.415.207.862.586.862 1.154h-1v-.003l-.003-.01a.213.213 0 0 0-.036-.053.86.86 0 0 0-.27-.194C8.91 6.1 8.49 6 8 6c-.491 0-.912.1-1.19.24a.86.86 0 0 0-.271.194.213.213 0 0 0-.036.054l-.003.01z" />
+						<path
+							d="M2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2h-.438a2 2 0 0 1-1.94-1.515L2.31 5.243zM9 5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-2-2V5z" />
+					</svg>
+					That wasn't too bad, was it?
+
+		</p>
+
+</div>
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+	<p></p>
+	<script>
+		$(document).ready(function () {
+			$("#myShowBtn").click(function () {
+				$('.toast').toast({
+					delay: 2000
+				});
+				$('.toast').toast('show');
+			});
+		});
+	</script>
+	<script>
+		//Get the button
+		var mybutton = document.getElementById("myBtn");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function () {
+			scrollFunction()
+		};
+
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+	</script>
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="/__/firebase/8.1.2/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		     https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="/__/firebase/8.1.2/firebase-analytics.js"></script>
+
+	<!-- Initialize Firebase -->
+	<script src="/__/firebase/init.js"></script>
+
+
+
+	</body>
+
+</html>
